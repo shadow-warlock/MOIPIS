@@ -6,6 +6,7 @@ use App\Repository\ProductClassRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use JMS\Serializer\Annotation as Serializer;
 
 /**
  * @ORM\Entity(repositoryClass=ProductClassRepository::class)
@@ -31,6 +32,7 @@ class ProductClass
 
     /**
      * @ORM\ManyToOne(targetEntity=ProductClass::class, inversedBy="childrens")
+     * @Serializer\MaxDepth(depth=1)
      */
     private $parent;
 

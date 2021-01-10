@@ -1,0 +1,12 @@
+###
+GET http://localhost:8000/api/product_class
+Accept: application/json
+
+###
+GET http://localhost:8000/api/product_class?onlyRoot
+Accept: application/json
+
+###
+
+
+
